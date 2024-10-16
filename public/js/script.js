@@ -8,7 +8,6 @@ function submitLogin() {
     showErr.classList.add("error");
     showErr.innerHTML = "<label>Incorrect username or password.</label>";
 
-    displayInfo();
     fetch('https://restapi.tu.ac.th/api/v1/auth/Ad/verify', {
         method: 'POST',
         headers: {
@@ -30,7 +29,7 @@ function submitLogin() {
                 if (document.body.getElementsByClassName("error").length > 0) {
                     document.body.removeChild(document.body.getElementsByClassName("error")[0]);
                 }
-                //displayInfo(data);
+                displayInfo(data);
             }
         })
         .catch(error => {
@@ -41,7 +40,7 @@ function submitLogin() {
         });
 }
 
-function displayInfo() {
+function displayInfo(data) {
     var content = `
         <h2>Login success</h2>
         <div>
