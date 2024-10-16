@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>LOGIN (student / personnel)</h1>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Username / Email" required>
+                <label class="UsernameError"></label>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+                <label class="PasswordError"></label>
+            </div>
+            <div class="select-box">
+                <select name="roles" id="roles" required>
+                    <option disabled selected hidden>Select your role</option>
+                    <option value="Student">Student</option>
+                    <option value="Personnel">Personnel</option>
+                </select>
+                <label class="SelectError"></label>
+            </div>
+        </form>
+        <button type="submit" id="btn">LOGIN</button>
+    </div>
+</body>
